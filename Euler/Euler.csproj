@@ -1,8 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp2.2</TargetFramework>
+		<OutputType>Exe</OutputType>
+
+		<LangVersion>latest</LangVersion>
+
+		<Authors>Grzegorz Lang</Authors>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<RepositoryUrl>https://github.com/rev3r/Euler</RepositoryUrl>
+	</PropertyGroup>
 
 </Project>
