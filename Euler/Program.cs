@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Transactions;
 using static System.Console;
 
 namespace Euler
@@ -8,7 +9,7 @@ namespace Euler
 	{
 		private static void Main(string[] args)
 		{
-			Write("Problem to execute (nr): ");
+			Write("Problem to execute: ");
 
 			var choice = int.Parse(ReadLine());
 			var solution = GetSolution(choice);
@@ -19,13 +20,23 @@ namespace Euler
 
 		private static object GetSolution(int number)
 		{
-			var assembly = Assembly.GetExecutingAssembly();
-			var type = assembly.GetType("Euler.Problems.Problem" + number);
+			var type = GetProblemClassType(number);
 
-			var property = type.GetProperty("Solution");
+			return GetPropertyValue(type, "Solution");
+		}
+
+		private static Type GetProblemClassType(int number)
+		{
+			return Assembly.GetExecutingAssembly()
+				.GetType("Euler.Problems.Problem" + number);
+		}
+
+		private static object GetPropertyValue(Type type, string propertyName)
+		{
 			var instance = Activator.CreateInstance(type);
 
-			return property.GetMethod.Invoke(instance, null);
+			return type.GetProperty(propertyName)
+				.GetValue(instance, null);
 		}
 	}
 }
