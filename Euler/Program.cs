@@ -11,15 +11,17 @@ namespace Euler
 		{
 			var type = Assembly.GetExecutingAssembly()
 				.GetType("Euler.Problems.Problem" + number);
-			var instance = Activator.CreateInstance(type);
-			var prop = type.GetProperty("Solution");
 
 			var sw = Stopwatch.StartNew();
-			var result = prop.GetValue(instance, null);
+			var instance = Activator.CreateInstance(type);
 			sw.Stop();
 
-			return (result.ToString(),
-				sw.Elapsed.TotalMilliseconds);
+			var result = type
+				.GetProperty("Solution")
+				.GetValue(instance, null)
+				.ToString();
+
+			return (result, sw.Elapsed.TotalMilliseconds);
 		}
 
 		private static void Main(string[] args)
