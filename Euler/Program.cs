@@ -7,7 +7,7 @@ namespace Euler
 {
 	internal class Program
 	{
-		private static (string solution, double time) GetSolution(int number)
+		private static (string solution, double time) ExecuteProblem(int number)
 		{
 			var type = Assembly.GetExecutingAssembly()
 				.GetType("Euler.Problems.Problem" + number);
@@ -25,13 +25,13 @@ namespace Euler
 		private static void Main(string[] args)
 		{
 			Write("Which problem to execute: ");
-			var choice = int.Parse(ReadLine());
+			var number = int.Parse(ReadLine());
 
 			Clear();
-			WriteLine("Number:\t" + choice);
+			WriteLine("Number:\t" + number);
 
-			var (solution, time) = GetSolution(choice);
-			WriteLine("Result:\t" + solution);
+			var (result, time) = ExecuteProblem(number);
+			WriteLine("Result:\t" + result);
 			WriteLine($"Time:\t{time}ms");
 		}
 	}
