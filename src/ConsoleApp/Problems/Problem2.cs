@@ -1,17 +1,15 @@
 ﻿namespace ConsoleApp.Problems
 {
-	public class Problem2 : ProblemBase
+	public class Problem2 : ProblemBase<int>
 	{
-		public Problem2() : base(4000000)
+		public override int Solve()
 		{
-		}
+			const int input = 4000000;
 
-		protected override long Solve(long input)
-		{
 			var sum = 2;
-
 			var last = 1;
 			var current = 2;
+
 			while (current <= input)
 			{
 				CalculateNextStep(ref last, ref current);

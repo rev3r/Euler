@@ -1,14 +1,7 @@
 ﻿namespace ConsoleApp.Problems
 {
-	public abstract class ProblemBase
+	public abstract class ProblemBase<TResult>
 	{
-		public long Solution { get; }
-
-		public ProblemBase(long input)
-		{
-			Solution = Solve(input);
-		}
-
-		protected abstract long Solve(long input);
+		public abstract TResult Solve();
 	}
 }

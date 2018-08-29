@@ -2,17 +2,15 @@
 
 namespace ConsoleApp.Problems
 {
-	public class Problem3 : ProblemBase
+	public class Problem3 : ProblemBase<int>
 	{
-		public Problem3() : base(600851475143)
+		public override int Solve()
 		{
-		}
+			var input = 600851475143;
 
-		protected override long Solve(long input)
-		{
 			int factor;
-
 			var max = Math.Sqrt(input);
+
 			for (factor = 2; input > 1; factor++)
 			{
 				DivideUntilPossible(ref input, factor);

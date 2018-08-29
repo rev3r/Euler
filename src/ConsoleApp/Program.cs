@@ -13,7 +13,7 @@ namespace Euler
 			Console.Clear();
 			Console.WriteLine("Number:\t\t" + number);
 
-			var (result, time) = ExecuteProblemHelper.Execute(number);
+			var (result, time) = ExecuteProblemHelper.ExecuteAndMeasure(number);
 			Console.WriteLine("Result:\t\t" + result);
 			Console.WriteLine($"Time [ms]:\t{time}");
 		}

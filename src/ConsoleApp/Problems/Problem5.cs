@@ -2,16 +2,14 @@
 
 namespace ConsoleApp.Problems
 {
-	public class Problem5 : ProblemBase
+	public class Problem5 : ProblemBase<int>
 	{
 		private List<int> divisors = new List<int>();
 
-		public Problem5() : base(20)
+		public override int Solve()
 		{
-		}
+			const int input = 20;
 
-		protected override long Solve(long input)
-		{
 			divisors.Add(2);
 
 			for (var i = 3; i <= input; i++)

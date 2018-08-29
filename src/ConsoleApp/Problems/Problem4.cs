@@ -1,21 +1,18 @@
 ﻿namespace ConsoleApp.Problems
 {
-	public class Problem4 : ProblemBase
+	public class Problem4 : ProblemBase<int>
 	{
-		public Problem4() : base(999)
+		public override int Solve()
 		{
-		}
+			const int input = 999;
 
-		protected override long Solve(long input)
-		{
-			var solution = 0L;
+			var solution = 0;
 
 			for (var first = input; first > 99; first--)
 			{
 				for (var second = input; second > 99; second--)
 				{
 					var candidate = first * second;
-
 					if (IsPalindrome(candidate) && candidate > solution)
 					{
 						solution = candidate;
@@ -26,7 +23,7 @@
 			return solution;
 		}
 
-		private bool IsPalindrome(long candidate)
+		private bool IsPalindrome(int candidate)
 		{
 			var array = candidate.ToString().ToCharArray();
 			var lenght = array.Length;

@@ -1,13 +1,11 @@
 ﻿namespace ConsoleApp.Problems
 {
-	public class Problem1 : ProblemBase
+	public class Problem1 : ProblemBase<int>
 	{
-		public Problem1() : base(1000)
+		public override int Solve()
 		{
-		}
+			const int input = 1000;
 
-		protected override long Solve(long input)
-		{
 			var sum = 0;
 
 			for (var i = 2; i < input; i++)
