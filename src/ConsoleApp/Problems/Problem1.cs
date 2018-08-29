@@ -1,12 +1,12 @@
-﻿namespace Euler.Problems
+﻿namespace ConsoleApp.Problems
 {
-	internal class Problem1 : ProblemBase<int, int>
+	public class Problem1 : ProblemBase
 	{
 		public Problem1() : base(1000)
 		{
 		}
 
-		protected override int Solve(int input)
+		protected override long Solve(long input)
 		{
 			var sum = 0;
 

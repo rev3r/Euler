@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Euler.Problems
+namespace ConsoleApp.Problems
 {
-	internal class Problem5 : ProblemBase<int, int>
+	public class Problem5 : ProblemBase
 	{
 		private List<int> divisors = new List<int>();
 
@@ -10,7 +10,7 @@ namespace Euler.Problems
 		{
 		}
 
-		protected override int Solve(int input)
+		protected override long Solve(long input)
 		{
 			divisors.Add(2);
 

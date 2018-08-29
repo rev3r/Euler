@@ -1,14 +1,14 @@
-﻿namespace Euler.Problems
+﻿namespace ConsoleApp.Problems
 {
-	internal class Problem4 : ProblemBase<int, int>
+	public class Problem4 : ProblemBase
 	{
 		public Problem4() : base(999)
 		{
 		}
 
-		protected override int Solve(int input)
+		protected override long Solve(long input)
 		{
-			var solution = 0;
+			var solution = 0L;
 
 			for (var first = input; first > 99; first--)
 			{
@@ -26,7 +26,7 @@
 			return solution;
 		}
 
-		private bool IsPalindrome(int candidate)
+		private bool IsPalindrome(long candidate)
 		{
 			var array = candidate.ToString().ToCharArray();
 			var lenght = array.Length;

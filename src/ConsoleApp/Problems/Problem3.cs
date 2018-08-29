@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Euler.Problems
+namespace ConsoleApp.Problems
 {
-	internal class Problem3 : ProblemBase<long, long>
+	public class Problem3 : ProblemBase
 	{
 		public Problem3() : base(600851475143)
 		{

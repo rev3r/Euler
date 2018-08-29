@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28016.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euler", "Euler\Euler.csproj", "{BEA5FA5E-360B-48B3-A9C5-923CF0D4B91D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\ConsoleApp", "src\ConsoleApp\ConsoleApp.csproj", "{BEA5FA5E-360B-48B3-A9C5-923CF0D4B91D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BD22C40-6C21-4397-A2F2-0E2CC771F931}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		CodeMaid.config = CodeMaid.config
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "tests\UnitTests\UnitTests.csproj", "{D4E97002-131C-4AB3-B132-2F587638C21A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BEA5FA5E-360B-48B3-A9C5-923CF0D4B91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEA5FA5E-360B-48B3-A9C5-923CF0D4B91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEA5FA5E-360B-48B3-A9C5-923CF0D4B91D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E97002-131C-4AB3-B132-2F587638C21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E97002-131C-4AB3-B132-2F587638C21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E97002-131C-4AB3-B132-2F587638C21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E97002-131C-4AB3-B132-2F587638C21A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
