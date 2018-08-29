@@ -1,0 +1,13 @@
+﻿<Project>
+
+	<PropertyGroup>
+		<Authors>Grzegorz Lang</Authors>
+		<NeutralLanguage>en-US</NeutralLanguage>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<NetCoreVersion>2.2</NetCoreVersion>
+	</PropertyGroup>
+
+</Project>
