@@ -12,6 +12,54 @@ namespace UnitTests
 		}
 
 		[Fact]
+		public void ExecuteProblem10_ProperSolutionValue()
+		{
+			Check<Problem10>(142913828922);
+		}
+
+		[Fact]
+		public void ExecuteProblem11_ProperSolutionValue()
+		{
+			Check<Problem11>(70600674);
+		}
+
+		[Fact]
+		public void ExecuteProblem12_ProperSolutionValue()
+		{
+			Check<Problem12>(76576500);
+		}
+
+		[Fact]
+		public void ExecuteProblem13_ProperSolutionValue()
+		{
+			Check<Problem13>(5537376230);
+		}
+
+		[Fact]
+		public void ExecuteProblem14_ProperSolutionValue()
+		{
+			Check<Problem14>(837799);
+		}
+
+		[Fact]
+		public void ExecuteProblem15_ProperSolutionValue()
+		{
+			Check<Problem15>(137846528820);
+		}
+
+		[Fact]
+		public void ExecuteProblem16_ProperSolutionValue()
+		{
+			Check<Problem16>(1366);
+		}
+
+		[Fact]
+		public void ExecuteProblem17_ProperSolutionValue()
+		{
+			Check<Problem17>(21124);
+		}
+
+		[Fact]
 		public void ExecuteProblem2_ProperSolutionValue()
 		{
 			Check<Problem2>(4613732);
@@ -35,12 +83,43 @@ namespace UnitTests
 			Check<Problem5>(232792560);
 		}
 
-		private static void Check<T>(long solution)
-			where T : ProblemBase, new()
+		[Fact]
+		public void ExecuteProblem6_ProperSolutionValue()
 		{
-			var problem = new T();
+			Check<Problem6>(25164150);
+		}
 
-			Assert.Equal(solution, problem.Solution);
+		[Fact]
+		public void ExecuteProblem7_ProperSolutionValue()
+		{
+			Check<Problem7>(104743);
+		}
+
+		[Fact]
+		public void ExecuteProblem8_ProperSolutionValue()
+		{
+			Check<Problem8>(23514624000);
+		}
+
+		[Fact]
+		public void ExecuteProblem9_ProperSolutionValue()
+		{
+			Check<Problem9>(31875000);
+		}
+
+		private static void Check<TProblem>(int solution) where TProblem : ProblemBase<int>, new()
+		{
+			Assert.Equal(solution, new TProblem().Solve());
+		}
+
+		private static void Check<TProblem>(long solution) where TProblem : ProblemBase<long>, new()
+		{
+			Assert.Equal(solution, new TProblem().Solve());
+		}
+
+		private static void Check<TProblem>(ulong solution) where TProblem : ProblemBase<ulong>, new()
+		{
+			Assert.Equal(solution, new TProblem().Solve());
 		}
 	}
 }
