@@ -1,10 +1,28 @@
-﻿namespace ConsoleApp.Problems
+﻿using System.Numerics;
+
+namespace ConsoleApp.Problems
 {
-	public class Problem15 : ProblemBase<long>
+	public class Problem15 : IProblem<long>
 	{
-		public override long Solve()
+		public long Solve()
 		{
-			return 137846528820;
+			var side = 20;
+
+			var result = Factor(side * 2) / (Factor(side) * Factor(side));
+
+			return (long)result;
+		}
+
+		private BigInteger Factor(int number)
+		{
+			BigInteger result = 1;
+
+			for (var i = 2; i <= number; i++)
+			{
+				result *= i;
+			}
+
+			return result;
 		}
 	}
 }

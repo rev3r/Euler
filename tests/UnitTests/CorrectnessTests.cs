@@ -107,17 +107,12 @@ namespace UnitTests
 			Check<Problem9>(31875000);
 		}
 
-		private static void Check<TProblem>(int solution) where TProblem : ProblemBase<int>, new()
+		private static void Check<TProblem>(int solution) where TProblem : IProblem<int>, new()
 		{
 			Assert.Equal(solution, new TProblem().Solve());
 		}
 
-		private static void Check<TProblem>(long solution) where TProblem : ProblemBase<long>, new()
-		{
-			Assert.Equal(solution, new TProblem().Solve());
-		}
-
-		private static void Check<TProblem>(ulong solution) where TProblem : ProblemBase<ulong>, new()
+		private static void Check<TProblem>(long solution) where TProblem : IProblem<long>, new()
 		{
 			Assert.Equal(solution, new TProblem().Solve());
 		}

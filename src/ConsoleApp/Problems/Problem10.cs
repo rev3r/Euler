@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ConsoleApp.Problems
 {
-	public class Problem10 : ProblemBase<long>
+	public class Problem10 : IProblem<long>
 	{
 		private List<int> divisors = new List<int>();
 
-		public override long Solve()
+		public long Solve()
 		{
 			const int max = 2000000;
 

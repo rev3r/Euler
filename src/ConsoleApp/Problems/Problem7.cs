@@ -1,8 +1,8 @@
 ﻿namespace ConsoleApp.Problems
 {
-	public class Problem7 : ProblemBase<int>
+	public class Problem7 : IProblem<int>
 	{
-		public override int Solve()
+		public int Solve()
 		{
 			const int input = 10001;
 

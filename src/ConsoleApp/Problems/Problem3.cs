@@ -2,9 +2,9 @@
 
 namespace ConsoleApp.Problems
 {
-	public class Problem3 : ProblemBase<int>
+	public class Problem3 : IProblem<int>
 	{
-		public override int Solve()
+		public int Solve()
 		{
 			var input = 600851475143;
 
