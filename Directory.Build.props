@@ -7,6 +7,9 @@
 
 	<PropertyGroup>
 		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
 		<NetCoreVersion>2.2</NetCoreVersion>
 	</PropertyGroup>
 
