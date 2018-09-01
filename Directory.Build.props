@@ -10,7 +10,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<NetCoreVersion>2.2</NetCoreVersion>
+		<NetCoreVersion>3.0</NetCoreVersion>
 	</PropertyGroup>
 
 </Project>
